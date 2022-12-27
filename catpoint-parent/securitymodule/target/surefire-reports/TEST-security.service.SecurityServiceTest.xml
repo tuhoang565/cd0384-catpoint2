@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="security.service.SecurityServiceTest" time="0" tests="0" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="security.service.SecurityServiceTest" time="0.002" tests="0" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="java.vm.version" value="11.0.12+8-LTS-237"/>
     <property name="sun.boot.library.path" value="D:\Java\jdk\bin"/>
-    <property name="maven.multiModuleProjectDirectory" value="E:\Java\cd0384-java-application-deployment\cd0384-java-application-deployment-projectstarter-master\starter\catpoint-parent"/>
+    <property name="maven.multiModuleProjectDirectory" value="C:\Users\Tu Hoang\Downloads\cd0384-catpoint2-main\catpoint-parent"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="java.vendor.url" value="https://openjdk.java.net/"/>
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
@@ -15,7 +15,7 @@
     <property name="user.country" value="US"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="E:\Java\cd0384-java-application-deployment\cd0384-java-application-deployment-projectstarter-master\starter\catpoint-parent"/>
+    <property name="user.dir" value="C:\Users\Tu Hoang\Downloads\cd0384-catpoint2-main\catpoint-parent"/>
     <property name="java.vm.compressedOopsMode" value="32-bit"/>
     <property name="java.runtime.version" value="11.0.12+8-LTS-237"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
@@ -45,7 +45,7 @@
     <property name="java.class.path" value="D:\IntelliJ IDEA 2020.1\plugins\maven\lib\maven3\boot\plexus-classworlds-2.6.0.jar"/>
     <property name="java.vm.specification.version" value="11"/>
     <property name="sun.arch.data.model" value="64"/>
-    <property name="sun.java.command" value="org.codehaus.classworlds.Launcher -Didea.version2020.1 test"/>
+    <property name="sun.java.command" value="org.codehaus.classworlds.Launcher -Didea.version2020.1 install"/>
     <property name="java.home" value="D:\Java\jdk"/>
     <property name="user.language" value="en"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
