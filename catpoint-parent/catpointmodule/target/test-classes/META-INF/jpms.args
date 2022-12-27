@@ -1,0 +1,4 @@
+--patch-module
+catpointmodule=_
+--add-reads
+catpointmodule=ALL-UNNAMED

@@ -106,6 +106,8 @@ public class SecurityServiceTest {
 
         when(securityRepository.getAlarmStatus()).thenReturn(AlarmStatus.PENDING_ALARM);
 
+        when(securityRepository.getArmingStatus()).thenReturn(ArmingStatus.ARMED_HOME);
+
         Sensor sensor = new Sensor("Sensor 1", SensorType.DOOR, true);
 
         securityService.changeSensorActivationStatus(sensor, true);

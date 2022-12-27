@@ -17,7 +17,7 @@ import java.io.IOException;
  * by uploading their own picture, and 'scan' the picture, sending it for image analysis
  */
 public class ImagePanel extends JPanel implements StatusListener {
-    private SecurityService securityService;
+    private final SecurityService securityService;
 
     private JLabel cameraHeader;
     private JLabel cameraLabel;
