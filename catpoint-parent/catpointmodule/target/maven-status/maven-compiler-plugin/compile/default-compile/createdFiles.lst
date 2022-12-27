@@ -1,0 +1,9 @@
+catpoint\application\SensorPanel.class
+catpoint\service\StyleService.class
+catpoint\application\ControlPanel.class
+catpoint\application\CatpointApp.class
+catpoint\application\ImagePanel.class
+catpoint\application\CatpointGui.class
+catpoint\data\PretendDatabaseSecurityRepositoryImpl$1.class
+catpoint\application\DisplayPanel.class
+catpoint\data\PretendDatabaseSecurityRepositoryImpl.class
