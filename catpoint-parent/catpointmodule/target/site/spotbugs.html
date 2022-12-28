@@ -69,7 +69,7 @@
 <th>Missing Classes</th></tr>
 <tr class="b">
 <td>9</td>
-<td>5</td>
+<td>3</td>
 <td>0</td>
 <td>0</td></tr></table></section><section>
 <h2><a name="Files"></a>Files</h2>
@@ -78,79 +78,56 @@
 <th>Class</th>
 <th>Bugs</th></tr>
 <tr class="b">
-<td><a href="#catpoint.application.ControlPanel">catpoint.application.ControlPanel</a></td>
+<td><a href="#catpoint.application.CatpointGui">catpoint.application.CatpointGui</a></td>
 <td>1</td></tr>
 <tr class="a">
-<td><a href="#catpoint.application.ImagePanel">catpoint.application.ImagePanel</a></td>
-<td>1</td></tr>
-<tr class="b">
 <td><a href="#catpoint.application.SensorPanel">catpoint.application.SensorPanel</a></td>
 <td>1</td></tr>
-<tr class="a">
+<tr class="b">
 <td><a href="#catpoint.data.PretendDatabaseSecurityRepositoryImpl">catpoint.data.PretendDatabaseSecurityRepositoryImpl</a></td>
-<td>2</td></tr></table></section><a name="catpoint.application.ControlPanel"></a><section>
-<h3><a name="catpoint.application.ControlPanel"></a>catpoint.application.ControlPanel</h3>
+<td>1</td></tr></table></section><a name="catpoint.application.CatpointGui"></a><section>
+<h3><a name="catpoint.application.CatpointGui"></a>catpoint.application.CatpointGui</h3>
 <table border="0" class="bodyTable">
-<tr class="b">
+<tr class="a">
 <th>Bug</th>
 <th>Category</th>
 <th>Details</th>
 <th>Line</th>
 <th>Priority</th></tr>
-<tr class="a">
-<td>new catpoint.application.ControlPanel(SecurityService) may expose internal representation by storing an externally mutable object into ControlPanel.securityService</td>
-<td>MALICIOUS_CODE</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#EI_EXPOSE_REP2">EI_EXPOSE_REP2</a></td>
-<td>25</td>
-<td>Medium</td></tr></table></section><a name="catpoint.application.ImagePanel"></a><section>
-<h3><a name="catpoint.application.ImagePanel"></a>catpoint.application.ImagePanel</h3>
-<table border="0" class="bodyTable">
 <tr class="b">
-<th>Bug</th>
-<th>Category</th>
-<th>Details</th>
-<th>Line</th>
-<th>Priority</th></tr>
-<tr class="a">
-<td>new catpoint.application.ImagePanel(SecurityService) may expose internal representation by storing an externally mutable object into ImagePanel.securityService</td>
-<td>MALICIOUS_CODE</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#EI_EXPOSE_REP2">EI_EXPOSE_REP2</a></td>
-<td>32</td>
+<td>catpoint.data.PretendDatabaseSecurityRepositoryImpl stored into non-transient field CatpointGui.securityRepository</td>
+<td>BAD_PRACTICE</td>
+<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#SE_BAD_FIELD_STORE">SE_BAD_FIELD_STORE</a></td>
+<td>18</td>
 <td>Medium</td></tr></table></section><a name="catpoint.application.SensorPanel"></a><section>
 <h3><a name="catpoint.application.SensorPanel"></a>catpoint.application.SensorPanel</h3>
 <table border="0" class="bodyTable">
-<tr class="b">
+<tr class="a">
 <th>Bug</th>
 <th>Category</th>
 <th>Details</th>
 <th>Line</th>
 <th>Priority</th></tr>
-<tr class="a">
+<tr class="b">
 <td>new catpoint.application.SensorPanel(SecurityService) may expose internal representation by storing an externally mutable object into SensorPanel.securityService</td>
 <td>MALICIOUS_CODE</td>
 <td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#EI_EXPOSE_REP2">EI_EXPOSE_REP2</a></td>
-<td>34</td>
+<td>35</td>
 <td>Medium</td></tr></table></section><a name="catpoint.data.PretendDatabaseSecurityRepositoryImpl"></a><section>
 <h3><a name="catpoint.data.PretendDatabaseSecurityRepositoryImpl"></a>catpoint.data.PretendDatabaseSecurityRepositoryImpl</h3>
 <table border="0" class="bodyTable">
-<tr class="b">
+<tr class="a">
 <th>Bug</th>
 <th>Category</th>
 <th>Details</th>
 <th>Line</th>
 <th>Priority</th></tr>
-<tr class="a">
+<tr class="b">
 <td>catpoint.data.PretendDatabaseSecurityRepositoryImpl.getSensors() may expose internal representation by returning PretendDatabaseSecurityRepositoryImpl.sensors</td>
 <td>MALICIOUS_CODE</td>
 <td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#EI_EXPOSE_REP">EI_EXPOSE_REP</a></td>
 <td>85</td>
-<td>Medium</td></tr>
-<tr class="b">
-<td>Class catpoint.data.PretendDatabaseSecurityRepositoryImpl defines non-transient non-serializable instance field sensors</td>
-<td>BAD_PRACTICE</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#SE_BAD_FIELD">SE_BAD_FIELD</a></td>
-<td></td>
-<td>High</td></tr></table></section>
+<td>Medium</td></tr></table></section>
       </div>
     </div>
     <div class="clear">

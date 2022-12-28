@@ -1,5 +1,6 @@
 package catpoint.application;
 
+import catpoint.data.PretendDatabaseSecurityRepositoryImpl;
 import catpoint.service.StyleService;
 import net.miginfocom.swing.MigLayout;
 import security.model.ArmingStatus;
@@ -15,14 +16,12 @@ import java.util.stream.Collectors;
  */
 public class ControlPanel extends JPanel {
 
-    private final SecurityService securityService;
     private Map<ArmingStatus, JButton> buttonMap;
 
 
     public ControlPanel(SecurityService securityService) {
         super();
         setLayout(new MigLayout());
-        this.securityService = securityService;
 
         JLabel panelLabel = new JLabel("System Control");
         panelLabel.setFont(StyleService.HEADING_FONT);

@@ -16,7 +16,7 @@ import javax.swing.*;
  */
 public class SensorPanel extends JPanel implements StatusListener {
 
-    private final SecurityService securityService;
+    private SecurityService securityService;
 
     private JLabel panelLabel = new JLabel("Sensor Management");
     private JLabel newSensorName = new JLabel("Name:");
@@ -31,6 +31,7 @@ public class SensorPanel extends JPanel implements StatusListener {
     public SensorPanel(SecurityService securityService) {
         super();
         setLayout(new MigLayout());
+
         this.securityService = securityService;
 
         securityService.addStatusListener(this);
