@@ -7,6 +7,7 @@ import security.model.AlarmStatus;
 import security.model.ArmingStatus;
 import security.model.Sensor;
 
+import java.io.Serializable;
 import java.lang.reflect.Type;
 import java.util.Set;
 import java.util.TreeSet;

@@ -97,7 +97,7 @@ public class SecurityServiceTest {
 
         securityService.changeSensorActivationStatus(sensor, !sensorActive);
 
-        verify(securityRepository, never()).setAlarmStatus(any(AlarmStatus.class));
+        verify(securityRepository, never()).setArmingStatus(any(ArmingStatus.class));
     }
 
     // 5. If a sensor is activated while already active and the system is in pending state, change it to alarm state.
@@ -170,7 +170,7 @@ public class SecurityServiceTest {
         sensors.add(new Sensor("Sensor 1", SensorType.DOOR, true));
         sensors.add(new Sensor("Sensor 2", SensorType.WINDOW, false));
 
-        when(securityRepository.getSensors()).thenReturn(sensors);
+        when(securityRepository.getArmingStatus()).thenReturn(ArmingStatus.DISARMED);
 
         securityService.setArmingStatus(armingStatus);
         securityService.getSensors().forEach(sensor -> assertFalse(sensor.getActive()));

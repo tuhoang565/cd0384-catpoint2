@@ -54,6 +54,8 @@ public class SecurityService {
      * @param armingStatus
      */
     public void setArmingStatus(ArmingStatus armingStatus) {
+        ArmingStatus armingStatusCurrent = getArmingStatus();
+
         if (catDetected && armingStatus == ArmingStatus.ARMED_HOME) {
             setAlarmStatus(AlarmStatus.ALARM);
         }
@@ -62,8 +64,10 @@ public class SecurityService {
             setAlarmStatus(AlarmStatus.NO_ALARM);
         }
 
-        if (armingStatus == ArmingStatus.ARMED_HOME || armingStatus == ArmingStatus.ARMED_AWAY) {
-            resetAllSensors();
+        if (armingStatusCurrent == ArmingStatus.DISARMED) {
+            if (armingStatus == ArmingStatus.ARMED_HOME || armingStatus == ArmingStatus.ARMED_AWAY) {
+                resetAllSensors();
+            }
         }
 
         securityRepository.setArmingStatus(armingStatus);
@@ -129,6 +133,7 @@ public class SecurityService {
                     setAlarmStatus(AlarmStatus.ALARM);
                     break;
                 default:
+//                    setAlarmStatus(AlarmStatus.PENDING_ALARM);
                     break;
             }
 
@@ -161,11 +166,9 @@ public class SecurityService {
         if (!sensor.getActive() && active) {
             handleSensorActivated();
         } else if (sensor.getActive() && !active) {
-            sensor.setActive(false);
+            handleSensorDeactivated();
         } else if (sensor.getActive() && active) {
             handleSensorActivated();
-//        } else {
-//            handleSensorActivated();
         }
 
         sensor.setActive(active);
