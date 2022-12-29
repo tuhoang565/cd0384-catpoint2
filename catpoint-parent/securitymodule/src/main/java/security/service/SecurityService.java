@@ -40,13 +40,6 @@ public class SecurityService {
         sensors.forEach(s -> securityRepository.updateSensor(s));
     }
 
-    private void handleAllSensorsDeactivated() {
-        AlarmStatus alarmStatus = getAlarmStatus();
-        if (alarmStatus == AlarmStatus.PENDING_ALARM) {
-            setAlarmStatus(AlarmStatus.NO_ALARM);
-        }
-    }
-
     /**
      * Sets the current arming status for the system. Changing the arming status
      * may update both the alarm status.
@@ -133,7 +126,6 @@ public class SecurityService {
                     setAlarmStatus(AlarmStatus.ALARM);
                     break;
                 default:
-//                    setAlarmStatus(AlarmStatus.PENDING_ALARM);
                     break;
             }
 
@@ -144,15 +136,9 @@ public class SecurityService {
      * Internal method for updating the alarm status when a sensor has been deactivated
      */
     private void handleSensorDeactivated() {
-        switch (securityRepository.getAlarmStatus()) {
-            case PENDING_ALARM:
+        AlarmStatus alarmStatus = getAlarmStatus();
+        if (alarmStatus == AlarmStatus.PENDING_ALARM) {
                 setAlarmStatus(AlarmStatus.NO_ALARM);
-                break;
-            case ALARM:
-                setAlarmStatus(AlarmStatus.PENDING_ALARM);
-                break;
-            default:
-                break;
         }
     }
 
@@ -175,7 +161,8 @@ public class SecurityService {
         securityRepository.updateSensor(sensor);
 
         if (allSensorsInactive()) {
-            handleAllSensorsDeactivated();
+//            handleAllSensorsDeactivated();
+            handleSensorDeactivated();
         }
     }
 

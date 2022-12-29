@@ -1,4 +1,0 @@
-# Created at 2022-12-29T00:36:24.467
-Boot Manifest-JAR contains absolute paths in classpath 'E:\Java\cd0384-java-application-deployment\cd0384-java-application-deployment-projectstarter-master\starter\catpoint-parent\catpointmodule\target\test-classes'
-Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
-
